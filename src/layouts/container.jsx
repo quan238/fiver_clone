@@ -1,7 +1,10 @@
+import Header from "../components/header";
+
 export const Container = ({ children, className }) => {
-	return (
-		<div className={`md:container mx-auto px-4 h-full ${className}`}>
-			{children}
-		</div>
-	);
+  return (
+    <div className={`md:container mx-auto px-4 h-full ${className}`}>
+      <Header />
+      {children}
+    </div>
+  );
 };

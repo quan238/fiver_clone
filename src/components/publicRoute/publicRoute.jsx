@@ -1,18 +1,21 @@
-import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
-import { Navbar } from '../navbar';
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+import Header from "../header";
 
 export const PublicRoute = ({ component: Component, ...props }) => {
-	const { user } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth);
 
-	return (
-		<>
-			<Navbar />
-			{
-				user && props.restricted
-					? <Navigate to={{ pathname: '/', state: { from: props.location } }} replace />
-					: <Component {...props} />
-			}
-		</>
-	);
+  return (
+    <>
+      <Header />
+      {user && props.restricted ? (
+        <Navigate
+          to={{ pathname: "/", state: { from: props.location } }}
+          replace
+        />
+      ) : (
+        <Component {...props} />
+      )}
+    </>
+  );
 };

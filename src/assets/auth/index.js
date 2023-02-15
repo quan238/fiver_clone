@@ -1,9 +1,5 @@
-import EmailIcon from './emailIcon.svg';
-import PasswordIcon from './passwordIcon.svg';
-import UserIcon from './userIcon.svg';
+import EmailIcon from "./emailIcon.svg";
+import PasswordIcon from "./passwordIcon.svg";
+import UserIcon from "./userIcon.svg";
 
-export {
-	EmailIcon,
-	PasswordIcon,
-	UserIcon
-};
+export { EmailIcon, PasswordIcon, UserIcon };

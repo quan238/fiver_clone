@@ -181,4 +181,134 @@ export const HEADER_CATEGORIES = [
       },
     ],
   },
+  {
+    title: 'Graphics & Design',
+    subcategories: [
+      {
+        title: 'Logo & Brand Identity',
+        items: [
+          'Logo Design',
+          'Brand Style Guides',
+          'Fonts & Typography',
+          'Business Cards & Stationery',
+        ],
+      },
+      {
+        title: 'Gaming',
+        items: [
+          'Game Art',
+          'Graphics for Streamers',
+          'Twitch Store',
+          'Art & Illustration',
+        ],
+      },
+      {
+        title: 'Illustration',
+        items: [
+          'NFT Art',
+          'Pattern Design',
+          'Portraits & Caricatures',
+          'Cartoons & Comics',
+          'Tattoo Design',
+          'Storyboards',
+          'Web & App Design',
+        ],
+      },
+      {
+        title: 'Web & App Design',
+        items: [
+          'App Design',
+          'Website Design',
+          'UX Design',
+          'Landing Page Design',
+          'Icon Design',
+          'Marketing Design',
+        ],
+      },
+      {
+        title: 'Marketing Design',
+        items: [
+          'Social Media Design',
+          'Email Design',
+          'Web Banners',
+          'Signage Design',
+        ],
+      },
+      {
+        title: 'Packaging & Covers',
+        items: [
+          'Packaging & Label Design',
+          'Book Design',
+          'Album Cover Design',
+          'Podcast Cover Art',
+          'Car Wraps',
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Music & Audio',
+    subcategories: [
+      {
+        title: 'Logo & Brand Identity',
+        items: [
+          'Logo Design',
+          'Brand Style Guides',
+          'Fonts & Typography',
+          'Business Cards & Stationery',
+        ],
+      },
+      {
+        title: 'Gaming',
+        items: [
+          'Game Art',
+          'Graphics for Streamers',
+          'Twitch Store',
+          'Art & Illustration',
+        ],
+      },
+      {
+        title: 'Illustration',
+        items: [
+          'NFT Art',
+          'Pattern Design',
+          'Portraits & Caricatures',
+          'Cartoons & Comics',
+          'Tattoo Design',
+          'Storyboards',
+          'Web & App Design',
+        ],
+      },
+      {
+        title: 'Web & App Design',
+        items: [
+          'App Design',
+          'Website Design',
+          'UX Design',
+          'Landing Page Design',
+          'Icon Design',
+          'Marketing Design',
+        ],
+      },
+      {
+        title: 'Marketing Design',
+        items: [
+          'Social Media Design',
+          'Email Design',
+          'Web Banners',
+          'Signage Design',
+        ],
+      },
+      {
+        title: 'Packaging & Covers',
+        items: [
+          'Packaging & Label Design',
+          'Book Design',
+          'Album Cover Design',
+          'Podcast Cover Art',
+          'Car Wraps',
+        ],
+      },
+    ],
+  },
 ]

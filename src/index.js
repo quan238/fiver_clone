@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import { App } from './components/app'
 import reportWebVitals from './reportWebVitals'
+import 'react-slideshow-image/dist/styles.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

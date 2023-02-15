@@ -196,7 +196,7 @@ export default function CardInfoSeller() {
       </div>
       <div className="user-stats-desc">
         <ul className="user-stats with-border-top">
-          <li className="location">
+          <li className="flex justify-between location">
             <span>
               <span
                 className="XQskgrQ user-stats-icon pr-2"
@@ -223,7 +223,7 @@ export default function CardInfoSeller() {
             </span>
             <b>India</b>
           </li>
-          <li className="member-since">
+          <li className="flex justify-between member-since">
             <span>
               <span
                 className="XQskgrQ user-stats-icon pr-2"
@@ -243,7 +243,7 @@ export default function CardInfoSeller() {
             </span>
             <b>Dec 2020</b>
           </li>
-          <li className="response-time">
+          <li className="flex justify-between response-time">
             <span>
               <span
                 className="XQskgrQ user-stats-icon pr-2"
@@ -264,7 +264,7 @@ export default function CardInfoSeller() {
             </span>
             <b>1 hour</b>
           </li>
-          <li className="recent-delivery">
+          <li className="flex justify-between recent-delivery">
             <span>
               <span
                 className="XQskgrQ user-stats-icon pr-2"

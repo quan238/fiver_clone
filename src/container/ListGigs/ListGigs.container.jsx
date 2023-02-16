@@ -3,17 +3,17 @@ import gigAPI from '../../api/gig'
 import GridCard from '../../components/GridCard'
 
 export default function ListGigsContainer({ seller }) {
-  React.useEffect(() => {
-    async function getGigInformation() {
-      const data = await gigAPI.getGigBySellerId()
-      if (data && data.content[0]) {
-        console.log(data)
-      }
-    }
+  // React.useEffect(() => {
+  //   async function getGigInformation() {
+  //     const data = await gigAPI.getGigBySellerId()
+  //     if (data && data.content[0]) {
+  //       console.log(data)
+  //     }
+  //   }
 
-    getGigInformation()
-    return
-  }, [])
+  //   getGigInformation()
+  //   return
+  // }, [])
 
   return (
     <div className="w-100">

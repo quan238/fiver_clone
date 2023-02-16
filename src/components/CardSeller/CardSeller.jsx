@@ -1,6 +1,6 @@
 import React from 'react'
 import './CardSeller.scss'
-export default function CardSeller() {
+export default function CardSeller({ seller }) {
   return (
     <div className="profile-card">
       <div className="seller-card">
@@ -12,7 +12,7 @@ export default function CardSeller() {
               htmlFor="profile_image_6613816671760"
             >
               <img
-                src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/6560c8974eba947bcdf28db4a4477d1c-1649250903959/6826f9c6-129f-4429-a643-351a7b5dcb00.png"
+                src={seller?.avatar}
                 className="profile-pict-img"
                 alt="stylishwebs"
               />
@@ -23,14 +23,18 @@ export default function CardSeller() {
               />
             </label>
           </div>
-          <div className="user-profile-label">
-            <div className="username-line">
-              <a href="/seller" className="seller-link">
-                stylishwebs
+          <div className="user-profile-label mb-0">
+            <div className="username-line mb-0">
+              <a
+                href={`/seller/${seller?.id}`}
+                className="seller-link "
+                style={{ paddingBottom: 0 }}
+              >
+                {seller?.name}
               </a>
             </div>
             <div className="one-liner-rating-wrapper">
-              <p className="one-liner">Affiliate Marketing Website Expert</p>
+              <p className="one-liner">{seller?.email}</p>
               <div className="orca-rating seller-rating color-yellow tbody-6">
                 <div className="stars">
                   <span

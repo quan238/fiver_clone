@@ -13,7 +13,9 @@ const CardContent = ({ type, active, title, price, description, ...rest }) => {
         <h4 className="flex items-center justify-between">
           <b className="title">{title}</b>
           <div className="price-wrapper">
-            <span className="price">{price}</span>
+            <span className="price" style={{ fontSize: 30 }}>
+              ${price}
+            </span>
           </div>
         </h4>
         <span>{description}</span>

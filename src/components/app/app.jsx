@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import DetailPage from '../../page/detail'
 import SellerPage from '../../page/seller'
 import { PublicRoute } from '../publicRoute'
@@ -9,11 +9,15 @@ function App() {
     <div>
       <Layout>
         <Routes>
-          <Route path="/" element={<PublicRoute component={DetailPage} />} />
           <Route
-            path="/seller"
+            path="gig/:id"
+            element={<PublicRoute component={DetailPage} />}
+          />
+          <Route
+            path="/seller/:id"
             element={<PublicRoute component={SellerPage} />}
           />
+          <Route path="*" element={<Navigate to="gig/1" replace />} />
         </Routes>
       </Layout>
     </div>

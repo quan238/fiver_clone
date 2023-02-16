@@ -7,13 +7,15 @@ import store from './store'
 import { App } from './components/app'
 import reportWebVitals from './reportWebVitals'
 import 'react-slideshow-image/dist/styles.css'
-
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <Provider store={store}>
     <Router>
       <App />
+      <ToastContainer />
     </Router>
   </Provider>
 )

@@ -1,6 +1,9 @@
 import React from 'react'
 import './CardInfoSeller.scss'
-export default function CardInfoSeller() {
+import { faker } from '@faker-js/faker'
+import moment from 'moment'
+
+export default function CardInfoSeller({ seller }) {
   return (
     <div className="seller-card seller_card-package">
       <div style={{ position: 'absolute', right: 0, height: 20, left: 0 }}>
@@ -50,7 +53,7 @@ export default function CardInfoSeller() {
               style={{ width: 150, height: 150, fontSize: '3em' }}
             >
               <img
-                src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/6560c8974eba947bcdf28db4a4477d1c-1649250903959/6826f9c6-129f-4429-a643-351a7b5dcb00.png"
+                src={seller?.avatar}
                 className="profile-pict-img"
                 alt="stylishwebs"
               />
@@ -69,14 +72,12 @@ export default function CardInfoSeller() {
               className="seller-link"
               rel="nofollow,noindex"
             >
-              stylishwebs
+              {seller?.name}
             </a>
           </div>
           <div className="oneliner-wrapper">
             <div className="liner-and-pen">
-              <span className="oneliner">
-                Affiliate Marketing Website Expert
-              </span>
+              <span className="oneliner">{seller?.role}</span>
             </div>
             <div className="ratings-wrapper">
               <span
@@ -188,15 +189,15 @@ export default function CardInfoSeller() {
           </div>
         </div>
       </div>
-      <div className="buttons-wrapper">
+      <div className="buttons-wrapper ">
         <button className="flex items-center w-full bg-green-500 text-white py-2 px-4 pb-2 border-0 rounded flex mx-auto h-10 justify-between pl-40 font-large font-bold transition duration-300 ease-in-out">
           Contact Me
         </button>
         <div id="react-first-message-popup" />
       </div>
       <div className="user-stats-desc">
-        <ul className="user-stats with-border-top">
-          <li className="flex justify-between location">
+        <ul className="user-stats with-border-top ">
+          <li className="flex justify-between location pt-5">
             <span>
               <span
                 className="XQskgrQ user-stats-icon pr-2"
@@ -221,7 +222,7 @@ export default function CardInfoSeller() {
               </span>
               From
             </span>
-            <b>India</b>
+            <b>{faker.address.city()}</b>
           </li>
           <li className="flex justify-between member-since">
             <span>
@@ -241,7 +242,7 @@ export default function CardInfoSeller() {
               </span>
               Member since
             </span>
-            <b>Dec 2020</b>
+            <b>{moment(faker.date.birthdate()).format('DD/MM/YYYY')}</b>
           </li>
           <li className="flex justify-between response-time">
             <span>
@@ -289,7 +290,7 @@ export default function CardInfoSeller() {
               </span>
               Last Delivery
             </span>
-            <strong>20&nbsp;hours</strong>
+            <strong>{Math.floor(Math.random() * 10)}&nbsp;hours</strong>
           </li>
         </ul>
       </div>

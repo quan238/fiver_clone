@@ -27,10 +27,18 @@ const divStyle = {
   height: '400px',
 }
 
-const CardOverview = ({ title, author, level, viewer, orders }) => {
+const CardOverview = ({
+  title,
+  author,
+  level,
+  viewer,
+  orders,
+  navbar,
+  image,
+}) => {
   return (
-    <div id="cartLeftSide">
-      <CardNavbar />
+    <>
+      <CardNavbar navbar={navbar} />
       <div id="cartTitle">
         <h1 id="title">{title}</h1>
         <div id="cartRating" className="flex items-center">
@@ -49,19 +57,20 @@ const CardOverview = ({ title, author, level, viewer, orders }) => {
       </div>
       <div id="cartMiddle">
         <Slide>
-          {slideImages.map((slideImage, index) => (
+          {[image].map((slideImage, index) => (
             <div
               className="w-100"
               style={{
                 ...divStyle,
-                backgroundImage: `url(${slideImage.url})`,
+                objectFit: 'cover',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `url(${slideImage})`,
               }}
             ></div>
           ))}
         </Slide>
 
-        <CardDescription />
-        <CardSeller />
         {/* <div id="cartComparePackage">
           <h1>Compare Package</h1>
           <table>
@@ -318,7 +327,7 @@ const CardOverview = ({ title, author, level, viewer, orders }) => {
           </table>
         </div> */}
       </div>
-    </div>
+    </>
   )
 }
 
